@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "274645669500",
+    "project_id": "fir-login-5c28a",
+    "storage_bucket": "fir-login-5c28a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274645669500:android:7262cc3e04706bbbdf5bf9",
+        "android_client_info": {
+          "package_name": "valenzuela.carlos.firebaselogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274645669500-ljk405d954emkv5tev0gsa0i5eg2jgq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl2d9FRPZn5q8CSYl1bcPsZ5UJ3qZt1RQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274645669500-ljk405d954emkv5tev0gsa0i5eg2jgq5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
