@@ -30,7 +30,7 @@ class SignUpActivity : AppCompatActivity() {
             val mEmail = binding.emailEditText.text.toString()
             val mPassword = binding.passwordEditText.text.toString()
             val mRepeatPassword = binding.repeatPasswordEditText.text.toString()
-            val passwordRegex = Pattern.compile("^(?=.*[-@#$%&^&+=]).{6,}$")
+            val passwordRegex = Pattern.compile("^" + "(?=.*[-@#$%^&+=])"+".{6,}" + "$")
 
             if(mEmail.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(mEmail).matches()){
                 Toast.makeText(this, "Ingrese un email valido.", Toast.LENGTH_SHORT).show()
@@ -50,15 +50,14 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun createAccount(email: String, password: String){
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
+        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
+            if (task.isSuccessful) {
 
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
-                }
+            } else {
+                // If sign in fails, display a message to the user.
+                Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
             }
+        }
     }
 }
