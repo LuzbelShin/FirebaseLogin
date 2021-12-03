@@ -33,6 +33,11 @@ class SignInActivity : AppCompatActivity() {
 
         val button = findViewById<Button>(R.id.signInAppCompatButton)
 
+        val signUp = binding.signUpTextView.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
+
         when{
             mEmail.isEmpty() || mPassword.isEmpty()->{
                 Toast.makeText(baseContext, "Correo o Contraseña incorrecta.", Toast.LENGTH_SHORT).show()
